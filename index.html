@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scheduling-tite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a4e9391705.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inputdata" style="padding: 20px 30px;">
+            <div class="heading">
+                <div class="feed">
+                    <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/abhaykarena11/CPU-Scheduling">GitHub</a>
+                </div>
+                <div class="feed">
+                    <i class="fa-regular fa-clipboard"></i>
+                    <a href="feedback.html">Feedback</a>
+                </div>
+            </div>
+            <h1>input</h1>
+            <select name="type" id="schedual-type" onchange="check()">
+                <option value="FCFS">First Come First Serve - (FCFS)</option>
+                <option value="SJF">Shortest Job First - (SJF)</option>
+                <option value="SRTF">Shortest Remaining Time First - (SRTF)</option>
+                <option value="RR">Round Robin</option>
+                <option value="Priority">Priority (non-Preemptive)</option>
+                <option value="PP">Preemptive Priority</option>
+            </select>
+            <div class="arivaldata">
+                <label for="a.t">Arrival Time:</label>
+                <input type="text" id="a.t" placeholder="e.g. 1 , 2 , 3 , 4">
+            </div>
+            <div class="bursedata">
+                <label for="b.t">Burst Time:</label>
+                <input type="text" id="b.t" placeholder="e.g. 1 , 2 , 3 , 4">
+            </div>
+            <div id="quant" style="display: none;">
+                <label for="q.t">quant</label>
+                <input type="number" id="q.t" placeholder="e.g. 1 ">
+            </div>
+            <div id="priority" style="display: none;">
+                <label for="p.t">Priority</label>
+                <input type="text" id="p.t" placeholder="Lower = Higher priority ">
+            </div>
+            <div id="pp" style="display: none;">
+                <label for="p.p">Priority</label>
+                <input type="text" id="p.p" placeholder="Lower = Higher priority ">
+            </div>
+            <div class="foot">
+                <div class="left-foot">
+                    <div id="add-data"></div>
+                    <button onclick="start()" class="button-65">Calculate</button>
+                </div>
+
+                <div class="right-foot" id="right-foot" style="display: none;">
+                    <!-- <div class="ghantt">
+                        <div class="foot-box">1</div>
+                        <p>3</p>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="output" disply="none" style="display: none;">
+        <table id="tab">
+            <thead>
+                <tr>
+                    <th>process</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                    <th>Completion Time</th>
+                    <th>T.A.T</th>
+                    <th>Waiting Time</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

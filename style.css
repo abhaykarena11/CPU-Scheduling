@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: rgb(250, 250, 250);
+}
+
+.container {
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+select {
+    height: 35px;
+}
+
+input {
+    margin-top: 5px;
+    width: 100%;
+    height: 35px;
+}
+
+#output {
+    margin: 20px 0;
+}
+
+.inputdata {
+    font-weight: 100;
+    padding-top: 170px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 2px, rgba(15, 91, 206, 0.1) 0px 2px 32px;
+    border-radius: 15px;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 2px 3px;
+}
+
+/* CSS */
+.button-65 {
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #2f80ed;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    height: 40px;
+    letter-spacing: normal;
+    line-height: 1.5;
+    outline: none;
+    overflow: hidden;
+    padding: 10px 10px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.button-65:hover {
+    background-color: #1366d6;
+    box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+}
+
+.button-65:hover:after {
+    opacity: .5;
+}
+
+.button-65:active {
+    box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+    transform: translateY(2px);
+    transition-duration: .35s;
+}
+
+.button-65:active:after {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .button-65 {
+        padding: 10px 17px;
+        width: 160px;
+    }
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.foot {
+    display: flex;
+    gap: 200px;
+
+    & .right-foot {
+        display: flex;
+
+        & .ghantt {
+            display: flex;
+            flex-direction: column;
+
+            & .foot-box {
+                background-color: light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+                ;
+
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 35px;
+                border: 0.5px solid rgb(77, 77, 247);
+
+            }
+
+            & .para-m {
+                margin-left: 24px;
+            }
+        }
+
+        & .master {
+            font-size: 10px;
+        }
+
+
+    }
+}
+
+#right-foot {
+    max-width: 900px;
+    display: flex;
+    /* Use Flexbox layout */
+    flex-wrap: wrap;
+}
+
+@media (max-width:500) {
+    .container {
+        width: 100%;
+    }
+
+    .foot {
+        gap: 20px;
+    }
+}
+
+@media (max-width : 768px) {
+    .foot {
+
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 1px;
+
+
+}
+
+.feed {
+    &:hover {
+        color: rgb(49, 49, 189);
+
+        a {
+            color: rgb(49, 49, 189);
+        }
+    }
+
+    gap: 5px;
+    display: flex;
+}
+
+.heading {
+    display: flex;
+    gap: 30px;
+}
